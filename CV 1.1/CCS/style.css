@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    width: 100%;
+    height: 80px;
+    background-color: #00796b;
+    display: flex; /*Aliniamos para que se vean en la misma linea*/
+    align-items: center;
+    justify-content: space-between; /* Espacio entre elementos */
+    padding: 0 30px;
+    position: relative;
+  }
+  
+  .bars {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .bars .line { /*Para muestor menu de lieneas*/
+    width: 30px;
+    height: 3px;
+    background-color: #f4f4f4;
+    margin: 6px 0;
+  }
+  
+  .nav_bar {
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw; /* Ancho completo de la pantalla */
+    background-color: #00796b;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  .nav_bar.active {
+    height: 250px;
+    padding: 10px 0;
+  }
+  
+  .nav_bar ul {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Lista visible cuando el menú está activo */
+  .nav_bar.active ul {
+    opacity: 1;
+  }
+  
+  .nav_bar ul li a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: 0.2s;
+    margin: 0 5px;
+  }
+  
+  .nav_bar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .contenedor
+  {
+      max-width: 900px; /*Ancho maximo del contenido */
+      margin: 0 auto; /*0 para la margen de arriba a abajo y el auto es para centrarlo */
+      padding: 20px; /*Solucion para que no se vea pegado a los bordes*/
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave al rededor */
+      border-radius: 10px;
+  
+  }
+  
+  .headercv
+  {
+      display: flex; /*Para que la foto y el nombre este al mismo nivel*/
+      align-items: center; /*Muy parecido al <center> en html*/
+      gap: 20px;
+      border-bottom:2px solid #ddd; /*Raya blanca*/
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+  
+  } 
+
+  img
+{
+    width: 120px;
+    height: 120px; /*Alto*/
+    border-radius: 50%; /*Marco redondo*/
+    object-fit: cover; /*para que no se deforme mucho*/
+    border: 3px solid #009688;
+}
+
+h1
+{
+    margin: 0; /*Creamos margen para que haya espacio*/
+    color: #009688;
+}
+
+h2
+{
+    margin: 5px;
+
+}
+
+section
+{
+    margin-bottom: 25px; /*Asi no se ven muy pegadas*/
+}
+
+h3
+{
+    border-bottom: 2px solid #009688;
+    color: #009688;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h4
+{
+    margin: 0;
+    color:#333;
+}
+
+span
+{
+    color: #666;
+    display: block; /*Para que el span se muestre en su linea*/
+    margin-bottom: 10px;
+}
+
+.lista_habilidades
+{
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.lista_habilidades li
+{
+    background-color: #e0f2f1;
+    padding: 8px 12px; 
+    
+}
+
+.contacto
+{
+    margin: 5px 0;
+}
+
+.contacto a /*Mezclamos la clase y un selector entonces va modificar todos lo elementos <a> de contacto*/
+{
+    color:#00796b;
+    text-decoration: none; /*Quitamos el subrayado del link para luego con hover agregarlo */
+
+}
+
+.contacto a:hover
+{
+    text-decoration: underline;
+
+}
+
+footer 
+{
+    border-top: 2px solid #ddd; /*pone una línea encima del footer para separarlo*/
+    padding-top: 15px;
+    text-align: center;
+    color: #555;
+  }
